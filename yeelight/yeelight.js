@@ -70,7 +70,7 @@ module.exports = function(RED) {
 
         var msg = {};
         this.send(msg);
-        
+
         this.on('input', function (msg) {
             try {
                 var cmd = this.command
@@ -78,6 +78,9 @@ module.exports = function(RED) {
                 this.light[cmd](msg.payload).then(function(response) {
                     msg.payload = response;
                     node.send(msg);
+                }).catch((err) => {
+                    node.status({fill:"red",shape:"ring",text:err});
+                    node.error(err)
                 });
                 node.status({fill:"green",shape:"ring",text:"Connected"});
             } catch(err) {
