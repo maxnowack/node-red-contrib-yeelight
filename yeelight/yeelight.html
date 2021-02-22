@@ -40,6 +40,7 @@
            <!-- <option value="set_hsv">Set HSV</option>  -->
             <option value="set_ct_abx">Set Temperature</option>
             <option value="set_bright">Set brightness</option>
+            <option value="set_scene">Set Scene</option>
             <option value="get_prop">Get property</option>
         </select>
     </div>
@@ -56,6 +57,7 @@
      SetPower: msg.payload = 0/1 <br/>
      Set Temperature: msg.payload = 1700 ~ 6500 K <br/>
      Brightness: msg.payload = 1..100 (%) <br/>
+     Set Scene: msg.payload =  "candle_flicker", "sunrise", "sunset", "romantic_lights", "happy_birthday", "notification"<br>
      Get property: msg.payload =  "name", "power", "bright", "rgb", "ct",<br>
      &nbsp;&nbsp;"hue", "sat", "color_mode", "delayoff", "flowing", "flow_params",<br>
      &nbsp;&nbsp;"music_on"<br>
@@ -73,9 +75,10 @@
      <b>SetPower</b>: msg.payload = 0/1 <br/>
      <b>Set Temperature</b>: msg.payload = 1700 ~ 6500 K <br/>
      <b>Brightness</b>: msg.payload = 1..100 (%) <br/>
-     <b>Get property</b>: msg.payload =  "name", "power", "bright", "rgb", 
+     Set Scene: msg.payload =  "candle_flicker", "sunrise", "sunset", "romantic_lights", "happy_birthday", "notification"<br>
+     <b>Get property</b>: msg.payload =  "name", "power", "bright", "rgb",
                                          "ct", "hue", "sat", "color_mode",
-                                         "delayoff", "flowing", "flow_params", 
+                                         "delayoff", "flowing", "flow_params",
                                          "music_on" <br/>
      </p>
 
